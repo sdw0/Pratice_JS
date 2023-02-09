@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>기본 값</title>
+    <style>
+        @import url();
+    </style>
+</head>
+<body>
+    <h3>< 화씨를 입력받아 섭씨로 바꾸는 프로그램 ></h3>
+    <script>
+        var Fah = prompt("화씨를 입력해주세요(°F) : ");
+        var FahNum = Number(Fah);
+        var total = (FahNum-32)*(5/9);
+        document.write("화씨 : " + total.toFixed(2) +"°C");
+    </script>
+</body>
+</html>
