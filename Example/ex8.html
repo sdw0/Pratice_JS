@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>기본 값</title>
+    <style>
+        @import url();
+    </style>
+</head>
+<body>
+    <h3>< 1에서 100까지 짝수의 합을 구해 봅시다. ></h3>
+    <script>
+        var s = prompt("숫자를 입력해주세요");
+        var num = Number(s);
+        
+        var sum = 0; var sum1 = 0;
+        for (var n=0; n<= num; n++ ){
+            if( n%2 == 0){
+                sum = sum + n;
+            }else if (n%2 != 0) {
+                sum1 = sum1 + n;
+            }      
+        } 
+        document.write("1 부터 " + num + "까지의 짝수 합은 " + sum + "</br>" ) ;
+        document.write("1 부터 " + num + "까지의 홀수 합은 " + sum1 + "</br>" ) ;
+        document.write("1 부터 " + num + "까지의 총 합은 " + (sum+sum1) );
+    </script>
+</body>
+</html>
