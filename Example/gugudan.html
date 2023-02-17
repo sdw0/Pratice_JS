@@ -1,0 +1,33 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>기본 값</title>
+    <style>
+        @import url();
+    </style>
+</head>
+<body>
+    <h3>< 구구단 프로그램 (2 ~ 9단) ></h3>
+    출력할 단수 : <input type="text" id="num">
+    <button onclick="run()">확인</button> <br><br>
+
+    <script>
+        function run() {
+            var strN = document.getElementById('num').value;
+            document.write("<h3>" + strN + "단입니다." + "</h3>");
+            for (var n = 1; n < 10; n++ ){
+            if (strN >1 && strN <10) {
+                document.write(strN + "*" + n +"=" +(n*strN) + "</br>");
+            } 
+          }
+            if (strN <= 1  || strN >=10){
+                document.write("오류");
+            }
+        }
+        
+    </script>
+
+</body>
+</html>
+
+

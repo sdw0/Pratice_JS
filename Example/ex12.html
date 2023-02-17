@@ -1,0 +1,73 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>기본 값</title>
+    <style>
+        @import url();
+    </style>
+</head>
+<body>
+    <h3>< 함수의 기초 ></h3>
+    <script>
+      var func1 = function() {      //매개 변수 리턴값없는 함수
+        document.write("I am func1" + "</br>");
+      }
+      func1();
+    
+      var func2 = function(name){   //매개 변수 있는 함수 
+        document.write("Hi " + name+ "</br>");
+      }
+      func2("Pobi");
+   
+      var func3 = function(name,score) { //매개 변수 2개
+        document.write("name = " + name + " score = " +  score +"</br>");
+      }
+      func3("홍길동",20);
+
+      var repeat = function(text, num){
+        for (var n=0; n<num; n++){
+            document.write("Hello"+"&nbsp");
+        }
+      }
+      repeat("Hello",5);
+      document.write("</br>");
+
+      var five = function() {   //리턴값 있는 함수 (호출한 변수에 값넣음)
+        return 5;
+      };
+      var x = five();
+      document.write(x + "</br>");
+
+      var foo = function() {    //리턴값 없는 함수를 변수에 넣으면 오류
+    
+      }
+      var x = foo();
+      document.write(x + "</br>");
+
+      //아무 값도 없는 리턴 사용하기
+      var test1 = function(text) {
+        if(text === "exit") {
+            return;     // == break
+        }
+        document.write("보이나요?");
+      }
+      test1("abc"+ "</br>");
+      test1("exit");
+      document.write("</br>");
+
+      // 함수이용해 이중 루프 빠져나가기 
+      var foop = function() {
+        for (var i = 0; i <10; i ++){
+            for (var j = 0; j < 10; j++) {
+                document.write(i,j);
+                if( i === 5 && j ===3) {
+                    break;
+                }
+            }
+        }
+      }
+      //foop();
+   
+    </script>
+</body>
+</html>

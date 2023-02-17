@@ -1,0 +1,49 @@
+<html>
+<body>
+    <h3>1 ~ 1000 사이의 소수를 출력하는 프로그램</h3>
+    <div id="result"></div>
+    <script>
+       var program = {};
+       program.num_arr = [];
+       program.prime_arr = [];
+
+       program.put_num = function(max_num) {
+            for (var i = 2; i<= max_num; i++ ) {
+                this.num_arr.push(i);
+            }
+       };
+
+       program.isPrime = function(num) {
+            for(var i = 2; i< num; i++){
+                if( num % i == 0) {       // 한번이라도 나머지가 0이되면 소수아님
+                    return false;
+                }
+
+            }
+            return true;
+       };
+
+       program.calc_prime = function() {
+            for ( var i = 0; i < this.num_arr.length; i++) {
+                var n = this.num_arr[i];
+                if (this.isPrime(n)) {
+                    this.prime_arr.push(n);
+                }
+            }
+       };
+
+       program.show = function () {
+        var ret = "";
+            for (var i = 0; i< this.prime_arr.length; i++) {
+                ret = ret + (i+1) + "번쨰 소수는 : " + this.prime_arr[i] +"</br>";
+            }
+            return ret;
+       };
+
+       program.put_num(1000);
+       program.calc_prime();
+       document.getElementById('result').innerHTML = program.show();
+
+    </script>
+</body>
+</html>

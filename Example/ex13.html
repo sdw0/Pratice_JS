@@ -1,0 +1,52 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>기본 값</title>
+    <style>
+        @import url();
+    </style>
+</head>
+<body>
+    <h3>< 객체의 기초 ></h3>
+    <hr>
+    1. 현실의 물체에 대응되는 개념 (마우스 , 키보드) <br>
+    2. 객체를 사용하면 변수와 함수를 묶어서 관리 가능 <br>
+    3. 객체는 속성과 메소드가진다 <br><br>
+    <script>
+        p1 = {};    //중괄호로 감싸면 p1객체 생성
+   
+        p1.name = "HoYoung Jung";
+        document.write(p1.name + "<br>");    // 속성 : 객체에 속한변수
+
+        p1.eat = function(food) {   //메소드 :객체에 속한 함수
+            document.write(food + " 를 먹습니다.");
+        }
+        p1.eat("바나나");
+        document.write("</br>");
+
+        var p2 = {};
+        p2.name = "crong";
+        p2.weight = 80;
+
+        p2.say = function(word) {       //this p2가리킴
+            document.write(this.name + " says " + word);
+        }
+        p2.say("사과");
+
+        //Json 표기법 (비워있는 객체가 아님)
+        var m1 = {
+            "name" : "honux",
+            "hp" : 100,
+            "power" : 20,
+            "attack" : function(target) {
+                target.hp -= this.power;
+            }
+        };
+    
+
+
+    </script>
+</body>
+</html>
+
+
