@@ -1,0 +1,64 @@
+<script>
+    var Human  = function (name , hp , pow) {
+        this.name = name;
+        this.hp = hp;
+        this.pow = pow;
+        this.attack = function(target) {
+            document.write(this.name + "이" + target.name + "을 공격했다.")
+            target.hp -= this.pow;
+        }
+        this.show = function() {
+            document.write( this.name, this.hp);
+        }
+    }
+    var p1 = new Human("honux",100,10);
+    var p2 = new Human("crong",50,30);
+   p1.attack(p2);
+   document.write("</br>");
+   p1.show();
+   document.write("</br>");
+   p2.show();
+
+   /*r객체 하나만 만들떄는 json방식
+   var a = {
+    "name" : "안녕"
+    "hp" : "30"
+   }
+
+    var Food = function(name,energy) {
+        this.name = name ;
+        this.energy = energy;
+        this.feed = function(human) {
+            fuman.hp += this.energy;
+        }
+    }
+    var d = new Food('donut',30);
+    p2
+    d.feed(p2);
+    d
+
+*/
+
+
+
+
+    /*
+Hi = {};
+
+function Human () {
+
+}
+실행할떄 Human();
+
+Hi.name = function() {
+
+}
+실행할때 Hi.name();
+
+var Human = function() {
+
+}
+실행할때 Human();
+*/
+</script>
+
