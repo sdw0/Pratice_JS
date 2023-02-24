@@ -1,0 +1,44 @@
+<h3>참조 변수 와 일반 변수</h3>
+<h4> 객체를 변수에 할당하면 참조변수, 기본타입을 변수에 할당하면 일반 변수</h4>
+
+<script>
+var a = 10;             //일반변수
+var a = "hello";        //일반변수
+var d = [1,2,3,4,5];    // 참조변수
+
+/*a = 10;
+a1 = a;
+a === a1 >> true*/
+
+/*
+    참조 변수 = 객체의 별명 (같은 사람을 이름 ,별명, 형 누나와같은 호칭으로 부름)
+*/
+
+var p1 = {};
+var p2 = p1;
+p1 === p2; // true
+p1.name = "honux";
+p1 === p2; // true
+
+
+    //일반 변수는 값에 의한 전달  (call by value)
+    var foo = function(v) {
+        v = v * 2;
+        document.write("foo : " + v);
+    };
+    var n = 10;
+   // n --> 10
+    foo(n) --> 20
+    n --> 10   
+    p1;
+    p1.w = 67;
+    p1
+    var diet = function(people) {
+        people.w -= 1;
+    };
+    diet(p1);       // p1 == people
+    p1
+
+
+
+</script>
